@@ -1,0 +1,38 @@
+<div class="row mt-2">
+    <div class="col-md-8 col-10">
+        <h4 class="text-danger">Trabalhos a serem avaliados</h4>
+    </div>
+    <div class="col-md-2 col-2 text-right">
+        <button class="btn btn-primary btn-search"><i class="mdi mdi-search-web"></i></button>
+    </div>
+</div>
+<div class="row mt-2 hide" id="form-search" data-status="0">
+    <div class="col-12">
+        <form>
+            <div class="form-group">
+                <input type="text" id="search" name="nameTeacher" class="form-control" placeholder="Digite o nome...">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="avaliation" class="row mt-3">
+    <div class="col-md-3 col-12 mt-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center"><strong>Nome do Projeto</strong></h5>
+                <button id="" class="btn btn-info btn-block btn-sm btn-avaliation"><i class="mdi mdi-check-circle"></i> Avaliar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Paginação -->
+<div class="card-footer mt-2">
+    <div>
+        <ul class="pagination justify-content-center pager" id="myPagination" paginaatual="1"></ul>
+    </div>
+</div>
+
+<script src="avaliation/controller/avaliation.js"></script>
+<!-- <script src="teacher/controller/search-teacher.js"></script> -->

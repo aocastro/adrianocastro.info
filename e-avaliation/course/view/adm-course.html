@@ -1,0 +1,43 @@
+<div class="row mt-2">
+    <div class="col-md-8 col-6">
+        <h4 class="text-danger">Cursos</h4>
+    </div>
+    <div class="col-md-2 col-6 text-right">
+        <button class="btn btn-avaliation btn-add"><i class="mdi mdi-plus-circle"></i></button>
+        <button class="btn btn-primary btn-search"><i class="mdi mdi-search-web"></i></button>
+    </div>
+    <!-- <div class="col-md-2 col-3">
+    </div> -->
+</div>
+<div class="row mt-2 hide" id="form-search" data-status="0">
+    <div class="col-12">
+        <form>
+            <div class="form-group">
+                <input type="text" id="search" name="nameCourse" class="form-control" placeholder="Digite o nome...">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3 mb-3 border-bottom border-top hide" id="new">
+    <div class="offset-md-3 col-md-6 col-12 mt-2 mb-2">
+        <form id="add-course">
+            <div class="form-group">
+                <label><strong>Nome do Curso</strong></label>
+                <input type="text" name="nameCourse" class="form-control input-lg">
+            </div>
+            <button class="btn btn-avaliation btn-block btn-lg btn-save"><i class="mdi mdi-content-save-settings"></i> Salvar</button>
+        </form>
+    </div>
+</div>
+<div id="list-course" class="row mt-3">
+
+</div>
+<!-- Paginação -->
+<div class="card-footer mt-2">
+    <div>
+        <ul class="pagination justify-content-center pager" id="myPagination" paginaatual="1"></ul>
+    </div>
+</div>
+
+<script src="course/controller/course.js"></script>
+<script src="course/controller/search-course.js"></script>

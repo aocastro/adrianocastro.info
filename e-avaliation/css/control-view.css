@@ -1,0 +1,13 @@
+.text-rel {
+    font-size: 1.2em;
+    color: #000;
+}
+
+@media (max-width: 576px) {
+    .lead {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+}

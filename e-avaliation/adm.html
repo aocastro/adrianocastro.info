@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>e-Avaliation</title>
+    <link rel="shortcut icon" href="img/e-avaliation.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/e-avaliation.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+</head>
+
+<body>
+
+    <div id="system" class="container">
+        <div class="row mt-3">
+            <div class="offset-md-5 col-md-2 col-12">
+                <img src="img/e-avaliation.png" alt="e-Avaliation" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-4 col-md-4 col-12">
+                <h5 class="text-danger text-center">Área de administração do sistema</h5>
+                <form id="validate-adm">
+                    <div class="form-group">
+                        <label>Usuário</label>
+                        <input type="text" name="username" class="form-control input-lg">
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="password" class="form-control input-lg">
+                    </div>
+                    <button class="btn btn-avaliation btn-block btn-lg btn-login"><i class="mdi mdi-login-variant"></i> Acessar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="offset-md-4 col-md-4 col-12 mt-1 border-top">
+                <a href="index" class="btn btn-warning btn-block btn-lg"><i class="mdi mdi-keyboard-return"></i> Voltar</a>
+            </div>
+        </div>
+        <div class="row mt-3" id="return">
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="system/controller/validate-login.js"></script>
+</body>
+
+</html>

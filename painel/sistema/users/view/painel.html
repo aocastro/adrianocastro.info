@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Painel</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #F8F9FA;
+    }
+
+    .botoes {
+        font-size: 40px;
+    }
+
+    .botoes-navbar {
+        color: white;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+
+    .navbar {
+        padding: 0;
+        margin: 0;
+        padding-top: 8px;
+        background: #17A2B8;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar row rounded mt-2">
+            <div class="col-12 col-md-6 text-center text-md-left">
+                <p class="botoes-navbar pl-md-3" style="cursor: default;">Painel</p>
+            </div>
+            <div class="row col-12 col-md-6">
+                <div class="col-5 text-center">
+                    <p class="botoes-navbar painelMensagens"><i class="fas fa-comments"></i> Mensagens</p>
+                </div>
+                <div class="col-4 text-center painelUsuarios">
+                    <p class="botoes-navbar"><i class="fas fa-users"></i> Usuários</p>
+                </div>
+                <div class="col-3 text-center logoff">
+                    <p class="botoes-navbar"><i class="fas fa-sign-out-alt"></i> Sair</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel -->
+        <div id="painel" class="pt-3">
+            <h3 class="text-info" style="margin-bottom: -10px;">Painel Administrativo</h3>
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <button class="btn btn-outline-info btn-block botoes py-5 painelMensagens"><i
+                            class="fas fa-comments" style="font-size: 80px;"></i><br>Mensagens</button>
+                </div>
+                <div class="col-12 col-md-6 mt-1 mt-md-0">
+                    <button class="btn btn-outline-info btn-block botoes py-5 painelUsuarios"><i class="fas fa-users"
+                            style="font-size: 80px;"></i><br>Usuários</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../../../js/bootstrap.min.js"></script>
+<script src="../../../js/jquery-3.3.1.min.js"></script>
+<script src="../../../js/funcoes.js"></script>
+<script src="../controller/logoff.js"></script>
+
+</html>

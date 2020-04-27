@@ -1,0 +1,28 @@
+/* Ajustes de imagens em cards */
+
+.img-card {
+    height: 200px;
+    object-fit: cover;
+}
+
+.negative-top-1em {
+    margin-top: -1em;
+}
+
+a {
+    cursor: pointer;
+}
+
+.modal-etechday {
+    background: transparent !important;
+}
+
+.line-heigth {
+    line-height: 3em;
+}
+
+.icon-user {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}

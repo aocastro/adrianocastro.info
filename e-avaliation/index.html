@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>e-Avaliation</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="img/e-avaliation.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/e-avaliation.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="libs/sweetalert2/dist/sweetalert2.css">
+    <script>
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="content" class="container mt-1">
+        <div class="form-center">
+            <div class="row">
+                <div class="offset-2 col-8">
+                    <img src="img/e-avaliation.png" alt="e-Avaliation" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-4 col-md-4 col-12">
+                    <form id="validate">
+                        <div class="form-group">
+                            <label>Login</label>
+                            <input type="text" name="loginTeacher" class="form-control input-lg">
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" name="passwordTeacher" class="form-control input-lg">
+                        </div>
+                        <button class="btn btn-avaliation btn-block btn-lg btn-validate"><i class="mdi mdi-login-variant"></i> Acessar</button>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="row mt-1">
+                <div class="offset-md-4 col-md-4 col-12 border-top mt-1">
+                    <a href="adm" class="btn btn-primary btn-block btn-lg"><i class="mdi mdi-account-key"></i> Acesso ao sistema</a>
+                </div>
+            </div> -->
+            <div class="row mt-3" id="return">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="teacher/controller/validate-teacher.js"></script>
+</body>
+
+</html>

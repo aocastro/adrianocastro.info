@@ -1,0 +1,116 @@
+{
+    "dir": "ltr",
+    "lang": "pt-br",
+    "name": "e Avaliation",
+    "scope": "/e-avaliation/",
+    "display": "fullscreen",
+    "start_url": "https://adrianocastro.info/e-avaliation/",
+    "short_name": "e-Avaliation",
+    "theme_color": "transparent",
+    "description": "Sistema de avaliação de TCC",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [{
+            "src": "img/e-avaliation.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "img/icon44.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon1240.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon300.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon150.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon88.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon24.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon50.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon620.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon36.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon76.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}

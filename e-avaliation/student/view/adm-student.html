@@ -1,0 +1,57 @@
+<div class="row mt-2">
+    <div class="col-md-8 col-6">
+        <h4 class="text-danger">Alunos</h4>
+    </div>
+    <div class="col-md-2 col-6 text-right">
+        <button class="btn btn-avaliation btn-add"><i class="mdi mdi-plus-circle"></i></button>
+        <button class="btn btn-primary btn-search"><i class="mdi mdi-search-web"></i></button>
+    </div>
+    <!-- <div class="col-md-2 col-3">
+    </div> -->
+</div>
+<div class="row mt-2 hide" id="form-search" data-status="0">
+    <div class="col-12">
+        <form>
+            <div class="form-group">
+                <input type="text" id="search" name="nameStudent" class="form-control" placeholder="Digite o nome...">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3 mb-3 border-bottom border-top hide" id="new">
+    <div class="offset-md-3 col-md-6 col-12 mt-2 mb-2">
+        <form id="add-student">
+            <div class="form-group">
+                <label><strong>Nome do Aluno</strong></label>
+                <input type="text" name="nameTeacher" class="form-control input-lg">
+            </div>
+            <div class="form-group">
+                <label><strong>Unidade escolar</strong></label>
+                <select name="work_school_idSchool" id="school" class="form-control input-lg">
+                    <option value="">Selecione a unidade escolar...</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label><strong>Curso</strong></label>
+                <select name="work_course_idCourse" id="course" class="form-control input-lg">
+                    <option value="">Selecione o curso...</option>
+                    
+                </select>
+            </div>
+            <button class="btn btn-avaliation btn-block btn-lg btn-save"><i class="mdi mdi-content-save-settings"></i> Salvar</button>
+        </form>
+    </div>
+</div>
+<div id="list-student" class="row mt-3">
+
+</div>
+<!-- Paginação -->
+<div class="card-footer mt-2">
+    <div>
+        <ul class="pagination justify-content-center pager" id="myPagination" paginaatual="1"></ul>
+    </div>
+</div>
+
+<script src="student/controller/student.js"></script>
+<script src="student/controller/search-student.js"></script>

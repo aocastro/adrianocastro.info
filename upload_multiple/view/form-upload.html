@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="offset-md-4 col-md-4 col-12">
+        <form id="meuForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Arquivo(s)</label>
+                <input type="file" name="arquivo[]" multiple class="form-control-file">
+            </div>
+            <button id="enviar" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div id="mensagem" class="offset-md-4 col-md-4 col-12 alert-info form-control-lg">
+
+    </div>
+</div>
+<script src="controller/upload.js">
+</script>

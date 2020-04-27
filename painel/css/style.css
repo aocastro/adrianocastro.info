@@ -1,0 +1,142 @@
+/* Fonte
+@font-face {
+    font-family: School;
+    src: url(../fonts/Schools\ Out!!!.otf)
+} */
+
+/* --- Index --- */
+@media (min-width: 576px) {
+    .card-columns {
+      -webkit-column-count: 3 !important;
+      -moz-column-count: 3 !important;
+      column-count: 3 !important;
+    }
+}
+@media (min-width: 576px) {
+    .cards-evento .card-columns {
+        -webkit-column-count: 2 !important;
+        -moz-column-count: 2 !important;
+        column-count: 2 !important;
+    }
+}
+a{
+    cursor: pointer;
+}
+::selection {
+    background: #B40406;
+    color: white;
+}
+.logo{
+    height: 8vh;
+}
+.bordanav{
+    border-bottom: 2px solid #DC3545;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: white !important;
+}
+.banner{
+    background: url('../../ETEC-Lins/img/fundo.png') repeat no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+}
+.titulo-ultnot{
+    font-size: 50px;
+}
+.texto-modal{
+    padding: 5%;
+}
+.img-modal{
+    width: 90%;
+}
+.evento:hover{
+    opacity: 1;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+}
+.evento{
+    opacity: 0.8;
+}
+.linksuteis:hover{
+    opacity: 1;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+}
+.linksuteis{
+    font-size: 1.5em;
+    text-align: center;
+    color: #A92935;
+    opacity: 0.7;
+    text-shadow: 1px 1px 2px #750010;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    word-wrap: break-word;
+}
+.linksuteis a{
+    text-decoration: none;
+    color: #A92935;
+}
+.footer{
+    background: #DC3545;
+}
+.redessociais:hover{
+    color: #A92935 !important;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+}
+.fundocursosindex{
+    margin-top: -32px;
+}
+.fotoDepoimento{
+    border-style: dashed;
+    border-color: white;
+}
+#subirTopo {
+    text-decoration: none;
+    bottom: 1%;
+    right: 0%;
+    color: #750010;
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    z-index: 50;
+}
+.btnEdital {
+    color: #DC3545;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 2px #750010;
+}
+.btnEdital:hover {
+    color: #A92935;
+    transition: 0.8s ease;
+    -webkit-transition: 0.8s ease;
+}
+/* --- Cursos --- */
+.scrollspySite{
+    position: relative;
+    overflow: auto;
+    height: 1000px;
+}
+.fundocinza{
+    background: #F3F3F3;
+}
+.imgbanners{
+    background: url('../img/fundo.png') repeat no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.list-group-item.active {
+    background-color: #DC3545 !important;
+    border-color: #DC3545 !important;
+}
+.breadcrumb-item > a{
+    color: #DC3545 !important;
+}
+/* Portal do Aluno */
+.modal > .modal-dialog > .modal-content > .modal-body > a{
+    color: #DC3545 !important;
+}

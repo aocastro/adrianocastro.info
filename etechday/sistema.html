@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema Gerenciador do Evento</title>
+    <link rel="shortcut icon" href="img/ds_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="libs/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="css/etechday.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"><img src="img/logo_menu_techday.png" alt="etechDay"></a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-format-subscript mdi-18px"></i> Inscrições
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- <a class="dropdown-item validate"><i class="mdi mdi-check-all"></i> Validar</a> -->
+                        <a class="dropdown-item list"><i class="mdi mdi-view-list"></i> Inscritos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-teamviewer mdi-18px"></i> Equipes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item add-team"><i class="mdi mdi-plus"></i> Adicionar</a>
+                        <a class="dropdown-item manage-team"><i class="mdi mdi-view-list"></i> Gerenciar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-check-circle mdi-18px"></i> Provas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item create-proof"><i class="mdi mdi-plus"></i> Adicionar</a>
+                        <a class="dropdown-item manage-proof"><i class="mdi mdi-view-list"></i> Gerenciar</a>
+                        <a class="dropdown-item"><i class="mdi mdi-plus-circle"></i> Pontuar</a>
+                    </div>
+                </li>
+            </ul>
+            <span class="navbar-text text-white">
+                <button class="btn btn-outline-light btn-sm btn-logout"><i class="mdi mdi-logout"></i> Sair do Sistema</button>
+            </span>
+        </div>
+    </nav>
+    <br>
+    <div class="container-fluid mt-5" id="system">
+        <row>
+            <div class="offset-md-2 col-md-8 col-12 text-center mt-3">
+                <h2>Sistema Genreciador do Evento</h2>
+                <img src="img/logo_oficial.png" alt="etechDay">
+            </div>
+        </row>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="system/controller/validate.js"></script>
+    <script src="js/menu-system.js"></script>
+    <script src="system/controller/logout.js"></script>
+
+</body>
+
+</html>

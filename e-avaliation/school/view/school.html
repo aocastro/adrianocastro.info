@@ -1,0 +1,42 @@
+<div class="row mt-2">
+    <div class="col-md-8 col-6">
+        <h4 class="text-danger">Unidades</h4>
+    </div>
+    <div class="col-md-2 col-6 text-right">
+        <button class="btn btn-avaliation btn-add"><i class="mdi mdi-plus-circle"></i></button>
+        <button class="btn btn-primary btn-search"><i class="mdi mdi-search-web"></i></button>
+        <button class="btn btn-warning btn-menu"><i class="mdi mdi-arrow-bottom-left-bold-outline"></i></button>
+    </div>
+    <!-- <div class="col-md-2 col-3">
+    </div> -->
+</div>
+<div class="row mt-2 hide" id="form-search" data-status="0">
+    <div class="col-12">
+        <form>
+            <div class="form-group">
+                <input type="text" id="search" name="nameTeacher" class="form-control" placeholder="Digite o nome...">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3 mb-3 border-bottom border-top" id="new">
+    <div class="offset-md-3 col-md-6 col-12 mt-2 mb-2">
+        <form id="add-school" enctype="multipart/form-data">
+            <div class="form-group">
+                <label><strong>Nome da unidade escolar</strong></label>
+                <input type="text" name="nameSchool" class="form-control input-lg">
+            </div>
+            <div class="form-group">
+                <label><strong>Logo da unidade escolar</strong></label>
+                <input type="file" name="imageSchool" class="form-control-file input-lg">
+            </div>
+            <button type="submit" class="btn btn-avaliation btn-block btn-lg"><i class="mdi mdi-content-save-settings"></i> Salvar</button>
+        </form>
+    </div>
+</div>
+<div id="list-school" class="row mt-3">
+
+</div>
+
+<script src="school/controller/school.js"></script>
+<script src="school/controller/add-school.js"></script>

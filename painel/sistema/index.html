@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Painel | Login</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #F8F9FA;
+    }
+
+    .form-signin {
+        width: 100%;
+        max-width: 380px;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div class="form-signin">
+        <!-- Painel -->
+        <h1 class="text-center display-3">Painel</h1>
+
+        <!-- Senha errada -->
+        <div class="alert alert-danger text-center mt-3" style="font-size: 18px;" id="senhaErrada">
+            <i class="fas fa-exclamation-triangle pr-1"></i> E-mail ou Senha incorretos!
+        </div>
+
+        <!-- Tela de Login -->
+        <form method="POST" id="formLogin">
+            <!-- E-mail -->
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="txtEmail" style="font-size: 25px;margin-bottom: -5px;">Login</label>
+                    <input type="text" class="form-control form-control-lg" id="txtLogin" placeholder="Digite seu login"
+                        required maxlength="60" autofocus name="loginUsers">
+                </div>
+            </div>
+            <!-- Senha -->
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="txtSenha" style="font-size: 25px;margin-bottom: -5px;">Senha</label>
+                    <input type="password" class="form-control form-control-lg" id="txtSenha"
+                        placeholder="Digite sua senha" required name="passwordUsers">
+                </div>
+            </div>
+            <a href="user/view/esqueciSenha.html" class="text-center">
+                <p style="font-size: 18px;">Esqueceu a senha?</p>
+            </a>
+            <!-- Entrar -->
+            <button class="btn btn-info btn-lg btn-block mb-3 login" style="font-size: 20px;">Entrar</button>
+        </form>
+        <a href="../index.html" class="btn btn-danger btn-lg btn-block" style="font-size: 20px;">Cancelar</a>
+    </div>
+</body>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="user/controller/login.js"></script>
+
+<script>
+    $('#senhaErrada').hide()
+</script>
+
+</html>

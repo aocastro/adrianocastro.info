@@ -1,0 +1,35 @@
+<div class="row mt-3">
+    <div class="col-12 text-center">
+        <h3 class="text-dark text-center"><i class=" mdi mdi-camera-image"></i> Upload de foto</h3>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="offset-md-3 col-md-6 col-12">
+        <form id="upload" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="archive" id="archive" class="form-control-file" value="">
+            </div>
+            <div class="form-group">
+                <label><i class="mdi mdi-comment-question"></i> Comentário</label>
+                <textarea name="coment" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-outline-danger btn-block" type="submit"><i class="mdi mdi-content-save"></i> Salvar</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal modal-etechday" id="loading">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-center text-danger">
+                    <span class="mdi mdi-loading mdi-spin">  Aguarde enviando a foto...</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="timeline/controller/upload-timeline.js"></script>

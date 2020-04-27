@@ -1,0 +1,66 @@
+<div class="row mt-3">
+    <div class="col-md-4 col-12">
+        <h3 class="text-agua"><i class="mdi mdi-view-list"></i> Formas de Pagamento</h3>
+    </div>
+    <div class="col-md-6 col-12">
+        <form id="find-payment">
+            <div class="form-group row">
+                <div class="col-md-9">
+                    <input type="text" name="" placeholder="Informe o nome da forma de pagamento..." class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-agua btn-block btn-find"><i class="mdi mdi-search-web"></i> Procurar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2 col-12">
+        <button class="btn btn-agua btn-block btn-new"><i class="mdi mdi-plus-circle"></i> Novo</button>
+    </div>
+</div>
+<div class="row border-top border-primary mt-2">
+    <div class="col-md-1 col-12 mt-1">
+        <p class="text-center text-danger te">Código</p>
+    </div>
+    <div class="col-md-8 col-12 mt-1">
+        <p class="text-danger text-md-left text-center">Nome da forma de pagamento</p>
+    </div>
+    <div class="col-md-3 col-12 mt-1">
+        <p class="text-center text-danger">Ações</p>
+    </div>
+</div>
+<div id="list-payments">
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-payments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-agua" id="modal-title">Título do modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-agua" id="modal-body">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Loading -->
+<div class="modal fade modal-loading" id="modal-loading" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-center text-danger">
+                    <span class="mdi mdi-loading mdi-spin">  Processando ..</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="payment/controller/manage-payment.js"></script>

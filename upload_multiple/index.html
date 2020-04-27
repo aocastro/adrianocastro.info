@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Upload de Imagens com Recortes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="libs/sweetalert2/dist/sweetalert2.css">
+</head>
+
+<body>
+
+    <div id="content" class="container">
+        <div class="row mt-5">
+            <div class="offset-md-4 col-md-4 col-12 mt-5">
+                <div class="alert-info form-control-lg">
+                    <h4 class="text-center">
+                        Sistema Upload Multíplo de Imagens
+                    </h4>
+                </div>
+                <p class="mt-5">
+                    <button class="btn btn-info btn-block btn-upload">Acessar Formulário</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.btn-upload').click(function(e) {
+                e.preventDefault()
+                $('#content').load('view/form-upload.html')
+            })
+        })
+    </script>
+
+</body>
+
+</html>

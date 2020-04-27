@@ -1,0 +1,100 @@
+<div class="row mt-3">
+    <div class="col-md-4 col-12">
+        <h3 class="text-agua"><i class="mdi mdi-view-list"></i> Gerenciar Mensalidades</h3>
+    </div>
+    <div class="col-md-8 col-12">
+        <form id="find-tuition">
+            <div class="form-group row">
+                <div class="col-md-9">
+                    <input type="text" name="name" placeholder="Informe o nome do aluno..." class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-agua btn-block btn-find"><i class="mdi mdi-search-web"></i> Procurar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row mt-3 border-top" id="list-tuition">
+
+</div>
+
+<div class="row mt-3 border-top">
+    <div class="offset-md-3 col-md-6 col-12">
+        <form id="receive-monthly">
+            <h4 class="text-agua text-center">Formulário de recebimento</h4>
+            <div class="form-group row mt-5">
+                <div class="col-md-4 col-12">
+                    <label>Aluno: </label>
+                </div>
+                <div class="col-md-8 col-12">
+                    <p id="nameStudents"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-12">
+                    <label>Date Vencimento: </label>
+                </div>
+                <div class="col-md-4 col-12">
+                    <p id="vencimento"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-12">
+                    <label>Valor Mensalidade: </label>
+                </div>
+                <div class="col-md-4 col-12">
+                    <p id="grossValue"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-12">
+                    <label>Valor Desconto: </label>
+                </div>
+                <div class="col-md-4 col-12">
+                    <input type="number" name="discount" id="discount" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-12">
+                    <label>Valor Líquido: </label>
+                </div>
+                <div class="col-md-4 col-12">
+                    <input type="number" name="amountPaid" id="amountPaid" value="" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-12">
+                    <label>Forma de Pagamento: </label>
+                </div>
+                <div class="col-md-4 col-12">
+                    <select name="AGUAVIVA_PAYMENT_METHODS_idPayment" id="methods" class="form-control">
+                        <option value="">Selecione...</option>
+                    </select>
+                </div>
+            </div>
+            <input type="hidden" value="" name="idTuition" id="idTuition" />
+            <input type="hidden" value="" name="idStudents" id="idStudents" />
+            <button class="btn btn-agua btn-block btn-lg receive"><i class="mdi mdi-cash-register"></i> Receber</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Loading -->
+<div class="modal fade modal-loading" id="modal-loading" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-center text-danger">
+                    <span class="mdi mdi-loading mdi-spin">  Processando ..</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="tuition/controller/manage-tuition.js"></script>
+<script src="tuition/controller/discount-calculation.js"></script>
+<script src="tuition/controller/types-payment.js"></script>
+<script src="tuition/controller/find-tuition.js"></script>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eTechDay - Etec Cafelândia</title>
+    <link rel="shortcut icon" href="img/ds_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/etechday.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="libs/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="libs/Croppie-2.6.4/croppie.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <a href="index.html">
+                <li class="text-center">
+                    <i class="mdi mdi-home-circle mdi-24px"></i><br> Home
+                </li>
+            </a>
+            <a>
+                <li class="text-center timeline">
+                    <i class="mdi mdi-timeline mdi-24px"></i><br> Timeline
+                </li>
+            </a>
+            <a>
+                <li class="text-center shedule">
+                    <i class="mdi mdi-clock mdi-24px"></i><br> Cronograma
+                </li>
+            </a>
+            <a>
+                <li class="text-center video">
+                    <i class="mdi mdi-youtube mdi-24px"></i><br> Vídeos
+                </li>
+            </a>
+            <a>
+                <li class="text-center selected">
+                    <i class="mdi mdi-account-badge mdi-24px"></i><br> Lista de <br> selecionados
+                </li>
+            </a>
+            <a>
+                <li class="text-center restrict">
+                    <i class="mdi mdi-account mdi-24px"></i><br> Área do <br> participante
+                </li>
+            </a>
+        </ul>
+    </nav>
+
+    <main class="container-fluid">
+        <div class="header">
+            <div class="menu-box">
+                <div class="menu-btn">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </div>
+            </div>
+            <div class="container-fluid text-center">
+                <img src="img/logo_menu_techday.png" alt="eTechDay" class="img text-center">
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="row">
+                <div class="offset-md-3 col-md-3 col-12">
+                    <img src="img/logo_oficial.png" alt="eTechday" class="img-fluid">
+                </div>
+                <div class="col-md-3 col-12 border-left text-left">
+                    <h5>Acompanhe aqui quem são os idealizadores, parceiros e patrocinadores do evento.</h5>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="offset-md-2 col-md-8 col-12">
+                    <h3 class="text-danger border-bottom text-center">Idealizadores e organização</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-2 col-md-2 col-6">
+                    <img src="img/Logo Cafelândia.png" alt="Etec Cafelândia" class="img-fluid">
+                </div>
+                <div class="col-md-2 col-6">
+                    <img src="img/ds_icon.png" alt="DS" class="img-fluid">
+                </div>
+                <div class="col-md-4 col-12 border-left">
+                    <h5 class="text-dark mt-5">
+                        Equipe de professores do curso Técnico em Desenvolvimento de Sistemas
+                    </h5>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 col-12 text-center">
+                    <h3 class="text-danger border-bottom text-center">Parceiro Educacional</h3>
+                    <img src="img/nutricao-salesiano.png" alt="Nutrição UniSalesiano" class="img-fluid">
+                </div>
+                <div class="col-md-6 col-12 text-center">
+                    <h3 class="text-danger border-bottom text-center">Patrocinador Oficial</h3>
+                    <img src="img/red_fox.jpeg" alt="Red Fox Eventos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="crow mt-3 text-center text-dark border-top">
+            Todos os direitos reservados. <br> Equipe de professores do Técnico em Desenvolvimento de Sistemas. <br> Etec Professora Helcy M. M. Aguiar - Cafelândia/SP. <br> 2019
+        </div>
+    </main>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="libs/Croppie-2.6.4/croppie.js"></script>
+    <script src="libs/Croppie-2.6.4/exif.js"></script>
+
+</body>
+
+</html>
+
+<!-- Modal -->
+<div id="cropImagePop" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Crop Image</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <div style="display: block; width: 300px; height: 300px;">
+                        <div id="upload-demo"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

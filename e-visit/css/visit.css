@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: #2d3436;
+}
+
+.text-title {
+    font-family: 'Righteous', cursive;
+    font-size: 3em;
+    color: #fff;
+}
+
+.text-subtitle {
+    font-family: 'Righteous', cursive;
+    font-size: 1.5em;
+    color: #d63031;
+}
+
+.bg-title {
+    background-image: linear-gradient(to bottom right, #d63031, #e17055);
+}
+
+.hide {
+    display: none;
+}

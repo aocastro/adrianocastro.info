@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-visit [Gerenciador de visitas técnicas]</title>
+    <link rel="shortcut icon" href="img/school-bus.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="css/visit.css">
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid bg-title">
+        <h1 class="display-4 text-title text-center">Gerenciador de visitas técnicas</h1>
+        <p class="lead text-center text-white">Sistema para gerenciamento de visitas técnicas escolares.</p>
+    </div>
+
+    <div class="container">
+        <div id="option" class="row">
+            <div class="col-12 border-bottom border-danger">
+                <h4 class="text-center">Acessar o sitema como?</h4>
+            </div>
+            <div class="offset-md-4 col-md-2 col-6">
+                <button class="btn btn-outline-danger btn-block text-center mt-5 adm">
+                    <h1><i class="mdi mdi-account-key mdi-48px"></i></h1>
+                    <p>Administrador</p>
+                </button>
+            </div>
+            <div class="col-md-2 col-6">
+                <button class="btn btn-outline-danger btn-block text-center mt-5 student">
+                    <h1><i class="mdi mdi-emoticon-cool-outline mdi-48px"></i></h1>
+                    <p>Estudande</p>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="adm" class="offset-md-4 col-md-4 col-12 hide">
+                <span class="text-subtitle text-center">Administrador do sistema</span>
+                <form action="">
+                    <div class="form-group">
+                        <label>Login</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="" class="form-control">
+                    </div>
+                    <button class="btn btn-danger btn-block"><i class="mdi mdi-login-variant"></i> Acessar</button>
+                </form>
+            </div>
+            <div id="student" class="offset-md-4 col-md-4 col-12 hide">
+                <span class="text-subtitle text-center">Estudandes</span>
+                <form action="">
+                    <div class="form-group">
+                        <label>Login</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="" class="form-control">
+                    </div>
+                    <button class="btn btn-danger btn-block"><i class="mdi mdi-login-variant"></i> Acessar</button>
+                </form>
+                <hr class="my-4">
+                <button class="btn btn-warning btn-block">Cadastrar-se</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/access.js"></script>
+</body>
+
+</html>
