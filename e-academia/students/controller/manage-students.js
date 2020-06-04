@@ -28,26 +28,26 @@ $(document).ready(function() {
                     </select>
                 </div>
             </div>
+            <div class="form-group">
+                <label>Endereço completo</label>
+                <input type="text" name="addressStudents" class="form-control">
+            </div>
             <div class="form-group row">
-                <div class="col-md-8 col-12">
-                    <label>Endereço completo</label>
-                    <input type="text" name="addressStudents" class="form-control">
-                </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
                     <label>Cidade</label>
                     <input type="text" name="cityStudents" class="form-control">
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
                     <label>Data de Nascimento</label>
                     <input type="date" name="birthStudents" class="form-control" required>
                 </div>
-                <div class="col-md-4 col-12">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 col-12">
                     <label>Telefone</label>
                     <input type="tel" name="phoneStudents" id="phone" placeholder="(00) 0000-0000" data-mask="(00) 0000-0000" class="form-control">
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
                     <label>Celular</label>
                     <input type="tel" name="celularStudents" id="celular" placeholder="(00) 00000-0000" data-mask="(00) 00000-0000" class="form-control" required>
                 </div>
@@ -67,10 +67,6 @@ $(document).ready(function() {
                     <label>Dia de vencimento</label>
                     <input type="number" name="paydayStudents" class="form-control" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Observações importantes sobre o aluno</label>
-                <textarea name="observationStudents" class="form-control"></textarea>
             </div>
             <div class="form-group row">
                 <div class="offset-md-9 col-md-3 col-12">

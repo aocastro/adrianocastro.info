@@ -20,7 +20,7 @@ $(document).ready(function() {
                 for (var i = 0; i < dados.length; i++) {
                     let types = `
                         <div class="offset-md-2 col-md-8 col-12 alert alert-warning" role="alert">
-                            <h5 class="text-agua">${dados[i].namePayment}: R$ ${dados[i].total}</h5>
+                            <h1 class="text-agua">${dados[i].namePayment}: R$ ${dados[i].total}</h1>
                         </div>
                     `
                     $('#rel-tuition').append(types)

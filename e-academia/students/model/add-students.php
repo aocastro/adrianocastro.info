@@ -3,8 +3,8 @@ include('../../connection/conn.php');
 session_start();
 
 try {
-    $stmt = $pdo->prepare('INSERT INTO AGUAVIVA_STUDENTS (nameStudents, sexStudents, addressStudents, cityStudents, birthStudents, phoneStudents, celularStudents, AGUAVIVA_SERVICES_idServices, paydayStudents, AGUAVIVA_USERS_idUsers, emailStudents, observationStudents) 
-                                                    VALUES (:a, :b, :c, :d, :e, :f, :g, :h, :i, :j, :l, :m)');
+    $stmt = $pdo->prepare('INSERT INTO AGUAVIVA_STUDENTS (nameStudents, sexStudents, addressStudents, cityStudents, birthStudents, phoneStudents, celularStudents, AGUAVIVA_SERVICES_idServices, paydayStudents, AGUAVIVA_USERS_idUsers, emailStudents) 
+                                                    VALUES (:a, :b, :c, :d, :e, :f, :g, :h, :i, :j, :l)');
     $stmt->execute(array(
         ':a' => utf8_decode($_POST['nameStudents']),
         ':b' => $_POST['sexStudents'],
@@ -16,8 +16,7 @@ try {
         ':h' => $_POST['AGUAVIVA_SERVICES_idServices'],
         ':i' => $_POST['paydayStudents'],
         ':j' => $_SESSION['idUsers'],
-        ':l' => $_POST['emailStudents'],
-        ':m' => $_POST['observationStudents']
+        ':l' => $_POST['emailStudents']
     ));
 
     // Início da busca do id cadastrado

@@ -15,8 +15,7 @@ try {
                                 emailStudents = :h,
                                 paydayStudents = :i,
                                 AGUAVIVA_USERS_idUsers = :j,
-                                AGUAVIVA_SERVICES_idServices = :l,
-                                observationStudents = :m
+                                AGUAVIVA_SERVICES_idServices = :l
                             WHERE idStudents = :idStudents');
     $stmt->execute(array(
     ':idStudents' => $_POST['idStudents'],
@@ -30,8 +29,7 @@ try {
     ':h' => $_POST['emailStudents'],
     ':i' => $_POST['paydayStudents'],
     ':j' => $_SESSION['idUsers'],
-    ':l' => $_POST['AGUAVIVA_SERVICES_idServices'],
-    ':m' => $_POST['observationStudents']
+    ':l' => $_POST['AGUAVIVA_SERVICES_idServices']
     ));
 
     $data = array('mensagem' => true);
