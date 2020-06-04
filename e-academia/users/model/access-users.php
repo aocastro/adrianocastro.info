@@ -5,7 +5,6 @@ $sql = $pdo->query("SELECT *, count(idUsers) as achou FROM AGUAVIVA_USERS WHERE 
 
 while ($resultado = $sql->fetch(PDO::FETCH_ASSOC)) {
     if($resultado['achou'] == 1){
-        ob_start();
         session_start();
         $_SESSION['idUsers'] = $resultado['idUsers'];
         $_SESSION['nameUsers'] = $resultado['nameUsers'];
