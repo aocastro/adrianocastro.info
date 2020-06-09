@@ -3,8 +3,8 @@ include('../../connection/conn.php');
 session_start();
 
 try {
-    $stmt = $pdo->prepare('INSERT INTO AGUAVIVA_STUDENTS (nameStudents, sexStudents, addressStudents, cityStudents, birthStudents, phoneStudents, celularStudents, AGUAVIVA_SERVICES_idServices, paydayStudents, AGUAVIVA_USERS_idUsers, emailStudents) 
-                                                    VALUES (:a, :b, :c, :d, :e, :f, :g, :h, :i, :j, :l)');
+    $stmt = $pdo->prepare('INSERT INTO AGUAVIVA_STUDENTS (nameStudents, sexStudents, addressStudents, cityStudents, birthStudents, phoneStudents, celularStudents, AGUAVIVA_SERVICES_idServices, paydayStudents, AGUAVIVA_USERS_idUsers, emailStudents, observationStudents) 
+                                                    VALUES (:a, :b, :c, :d, :e, :f, :g, :h, :i, :j, :l, :m)');
     $stmt->execute(array(
         ':a' => utf8_decode($_POST['nameStudents']),
         ':b' => $_POST['sexStudents'],
@@ -16,12 +16,13 @@ try {
         ':h' => $_POST['AGUAVIVA_SERVICES_idServices'],
         ':i' => $_POST['paydayStudents'],
         ':j' => $_SESSION['idUsers'],
-        ':l' => $_POST['emailStudents']
+        ':l' => $_POST['emailStudents'],
+        ':m' => $_POST['observationStudents']
     ));
 
     // Início da busca do id cadastrado
     $sql = $pdo->query("SELECT * FROM AGUAVIVA_STUDENTS ORDER BY idStudents DESC LIMIT 1");
-    
+
     while ($resultado = $sql->fetch(PDO::FETCH_ASSOC)) {
         $idStudents = $resultado['idStudents'];
     }
@@ -29,7 +30,7 @@ try {
 
     // Início da busca do valor da mensalidade
     $sql = $pdo->query("SELECT * FROM AGUAVIVA_SERVICES WHERE idServices = ".$_POST['AGUAVIVA_SERVICES_idServices']."");
-    
+
     while ($resultado = $sql->fetch(PDO::FETCH_ASSOC)) {
         $valueServices = $resultado['valueServices'];
     }
