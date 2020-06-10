@@ -1,0 +1,61 @@
+<form id="form-students">
+    <div class="form-group row">
+        <div class="col-md-9 col-12">
+            <label>Nome completo</label>
+            <input type="text" name="nameStudents" id="nameStudents" class="form-control" required>
+        </div>
+        <div class="col-md-3 col-12">
+            <label>Sexo</label>
+            <select name="sexStudents" id="sexStudents" class="form-control" required>
+                <option value="">Selecione...</option>
+                <option value="1">Masculino</option>
+                <option value="1">Feminino</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Endereço completo</label>
+        <input type="text" name="addressStudents" id="addressStudents" class="form-control">
+    </div>
+    <div class="form-group row">
+        <div class="col-md-6 col-12">
+            <label>Cidade</label>
+            <input type="text" name="cityStudents" id="cityStudents" class="form-control">
+        </div>
+        <div class="col-md-6 col-12">
+            <label>Data de Nascimento</label>
+            <input type="date" name="birthStudents" id="birthStudents" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-6 col-12">
+            <label>Telefone</label>
+            <input type="tel" name="phoneStudents" id="phoneStudents" placeholder="(00) 0000-0000" data-mask="(00) 0000-0000" class="form-control">
+        </div>
+        <div class="col-md-6 col-12">
+            <label>Celular</label>
+            <input type="tel" name="celularStudents" id="celularStudents" placeholder="(00) 00000-0000" data-mask="(00) 00000-0000" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" name="emailStudents" id="emailStudents" class="form-control">
+    </div>
+    <div class="form-group row">
+        <div class="col-md-9 col-12">
+            <label>Tipo de serviços</label>
+            <select name="AGUAVIVA_SERVICES_idServices" id="AGUAVIVA_SERVICES_idServices" class="form-control">
+                <option value="">Selecione</option>
+            </select>
+        </div>
+        <div class="col-md-3 col-12">
+            <label>Dia de vencimento</label>
+            <input type="number" name="paydayStudents" id="paydayStudents" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Observações</label>
+        <textarea name="observationStudents" id="observationStudents" class="form-control" cols="30" rows="5"></textarea>
+    </div>
+    <input type="hidden" name="idStudents" id="idStudents">
+</form>

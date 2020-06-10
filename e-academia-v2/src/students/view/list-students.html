@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header">
+                <div class="card-title row">
+                    <div class="col-12 col-md-9">
+                        <h4 class="text-agua">Gerenciador de Alunos</h4>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button class="btn btn-agua btn-block btn-new"><i class="mdi mdi-plus-circle"></i> Novo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="table-students">
+                        <thead class="thead-agua">
+                            <tr>
+                                <th scope="col" class="text-center">Código</th>
+                                <th scope="col" class="text-left">Nome do Alunos</th>
+                                <th scope="col" class="text-center">Telefone</th>
+                                <th scope="col" class="text-center">Celular</th>
+                                <th scope="col" class="text-center">Ações</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal com as funcionalidades do CRUD -->
+
+<div id="modal-students" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content shadow-lg shadow p-3 mb-5">
+            <div class="modal-header">
+                <div class="modal-title">
+                    ...
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Content</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="mdi mdi-close-circle"></i> Fechar</button>
+                <button type="button" class="btn btn-primary btn-save"><i class="mdi mdi-content-save"></i> Salvar mudanças</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fim do modal com as funcionalidades do CRUD -->
+
+<script src="src/students/controller/list-students.js"></script>
+<script src="src/students/controller/new-students.js"></script>
+<script src="src/students/controller/save-students.js"></script>
+<script src="src/students/controller/view-students.js"></script>
+<script src="src/students/controller/edit-students.js"></script>
+<script src="src/students/controller/delete-students.js"></script>
