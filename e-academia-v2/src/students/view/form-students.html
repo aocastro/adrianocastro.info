@@ -59,3 +59,11 @@
     </div>
     <input type="hidden" name="idStudents" id="idStudents">
 </form>
+
+<script src="libs/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#phoneStudents').mask('(99) 9999-9999')
+        $('#celularStudents').mask('(99) 99999-9999')
+    })
+</script>

@@ -6,13 +6,7 @@ function loadServices(idServices) {
         data: idServices,
         url: 'src/services/model/view-services.php',
         success: function(dados) {
-            for (const result of dados) {
-                if (idServices == result.idServices) {
-                    $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${result.idServies}" selected>${result.nameServices}</option>`)
-                } else {
-                    $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${result.idServies}">${result.nameServices}</option>`)
-                }
-            }
+            $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${dados.dados.idServices}">${dados.dados.nameServices}</option>`)
         }
     })
 }
@@ -43,7 +37,24 @@ $(document).ready(function() {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/students/view/form-students.html', function() {
                         $('#nameStudents').val(dado.dados.nameStudents)
-                        $('#sexStudents').val(dado.dados.sexStudents)
+                            // Seleção do sexo do input select
+                        $('#sexStudents').empty()
+
+                        switch (dado.dados.sexStudents) {
+                            case '1':
+                                $('#sexStudents').append(`
+                                                        <option value="1" selected>Masculino</option>
+                                                        <option value="2">Feminino</option>
+                                `)
+                                break
+                            case '2':
+                                $('#sexStudents').append(`
+                                                        <option value="1">Masculino</option>
+                                                        <option value="2" selected>Feminino</option>
+                                `)
+                                break
+                        }
+
                         $('#addressStudents').val(dado.dados.addressStudents)
                         $('#cityStudents').val(dado.dados.cityStudents)
                         $('#birthStudents').val(dado.dados.birthStudents)
@@ -51,13 +62,14 @@ $(document).ready(function() {
                         $('#celularStudents').val(dado.dados.celularStudents)
                         $('#emailStudents').val(dado.dados.emailStudents)
                         $('#AGUAVIVA_SERVICES_idServices').empty()
-                        idServices = dado.dados.AGUAVIVA_SERVICES_idServices
+                        $('#AGUAVIVA_SERVICES_idServices').attr('readonly', 'true')
+                        idServices = `idServices=${dado.dados.AGUAVIVA_SERVICES_idServices}`
+                        loadServices(idServices)
                         $('#paydayStudents').val(dado.dados.paydayStudents)
                         $('#observationStudents').val(dado.dados.observationStudents)
                         $('#idStudents').val(dado.dados.idStudents)
                     })
 
-                    loadServices(idServices)
                     $('.btn-save').removeAttr('data-operation')
                     $('.btn-save').show()
                     $('#modal-students').modal('show')

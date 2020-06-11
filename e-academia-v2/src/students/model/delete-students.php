@@ -4,6 +4,8 @@
 
     $idStudents = $_REQUEST['idStudents'];
 
+    $pdo->query("DELETE FROM AGUAVIVA_TUITION WHERE AGUAVIVA_STUDENTS_idStudents = $idStudents");
+
     $sql = "DELETE FROM AGUAVIVA_STUDENTS WHERE idStudents=$idStudents";
 
     $resultado = $pdo->query($sql);

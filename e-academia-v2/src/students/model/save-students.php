@@ -2,6 +2,8 @@
 
     session_start();
 
+    $_SESSION['idUsers'] = 1;
+
     //Obtém uma conexão com o banco de dados
     include('../../connection/conn.php');
 
@@ -28,7 +30,7 @@
                 $stmt = $pdo->prepare('INSERT INTO AGUAVIVA_STUDENTS (nameStudents, addressStudents, cityStudents, phoneStudents, celularStudents, birthStudents, sexStudents, emailStudents, paydayStudents, observationStudents, AGUAVIVA_USERS_idUsers, AGUAVIVA_SERVICES_idServices) VALUES (:nameStudents, :addressStudents, :cityStudents, :phoneStudents, :celularStudents, :birthStudents, :sexStudents, :emailStudents, :paydayStudents, :observationStudents, :idUsers, :idServices)');
                 $stmt->execute(array(
                     ':nameStudents' => utf8_decode($requestData['nameStudents']),
-                    ':addreeStudents' => utf8_decode($requestData['addreeStudents']),
+                    ':addressStudents' => utf8_decode($requestData['addressStudents']),
                     ':cityStudents' => utf8_decode($requestData['cityStudents']),
                     ':phoneStudents' => $requestData['phoneStudents'],
                     ':celularStudents' => $requestData['celularStudents'],
@@ -79,26 +81,36 @@
             } catch(PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível salvar o cadastro do aluno.'
+                    "mensagem" => 'Não foi possível salvar o cadastro do aluno.'.$e
                 );
             }
         } else { //Caso contrário, ou qualquer valor diferente de 'insert'
             //Prepara o comando sql para executar o UPDATE
             try {
-                $stmt = $pdo->prepare('UPDATE AGUAVIVA_SERVICES SET nameServices = :nameServices, valueServices = :valueServices WHERE idServices = :idServices');
+                $stmt = $pdo->prepare('UPDATE AGUAVIVA_STUDENTS SET nameStudents = :nameStudents, addressStudents = :addressStudents, cityStudents = :cityStudents, phoneStudents = :phoneStudents, celularStudents = :celularStudents, birthStudents = :birthStudents, sexStudents = :sexStudents, emailStudents = :emailStudents, paydayStudents = :paydayStudents, observationStudents = :observationStudents, AGUAVIVA_USERS_idUsers = :AGUAVIVA_USERS_idUsers, AGUAVIVA_SERVICES_idServices = :AGUAVIVA_SERVICES_idServices WHERE idStudents = :idStudents');
                 $stmt->execute(array(
-                    ':idServices' => $idServices,
-                    ':nameServices' => utf8_decode($requestData['nameServices']),
-                    ':valueServices' => $requestData['valueServices'])
+                    ':idStudents' => $idStudents,
+                    ':nameStudents' => utf8_decode($requestData['nameStudents']),
+                    ':addressStudents' => utf8_decode($requestData['addressStudents']),
+                    ':cityStudents' => utf8_decode($requestData['cityStudents']),
+                    ':phoneStudents' => $requestData['phoneStudents'],
+                    ':celularStudents' => $requestData['celularStudents'],
+                    ':birthStudents' => $requestData['birthStudents'],
+                    ':sexStudents' => $requestData['sexStudents'],
+                    ':emailStudents' => $requestData['emailStudents'],
+                    ':paydayStudents' => $requestData['paydayStudents'],
+                    ':observationStudents' => utf8_decode($requestData['observationStudents']),
+                    ':AGUAVIVA_USERS_idUsers' => $_SESSION['idUsers'],
+                    ':AGUAVIVA_SERVICES_idServices' => $requestData['AGUAVIVA_SERVICES_idServices'])
                 );
                 $dados = array(
                     "tipo" => 'success',
-                    "mensagem" => 'Dados do serviço alterado com sucesso.'
+                    "mensagem" => 'Dados do aluno alterado com sucesso.'
                 );
             } catch(PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível alterar os dados do serviço.'
+                    "mensagem" => 'Não foi possível alterar os dados do aluno.'
                 );
             }
         }

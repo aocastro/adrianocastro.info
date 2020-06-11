@@ -15,7 +15,7 @@
     } else{
         $dados = array(
             'tipo' => 'error',
-            'mensagem' => 'Não foi possível excluir a forma de pagamento.'
+            'mensagem' => 'Não foi possível excluir a forma de pagamento, , pois o mesmo está sendo utilizado em registro de mensalidades.'
         );
     }
 

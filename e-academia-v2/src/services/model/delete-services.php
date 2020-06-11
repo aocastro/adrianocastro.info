@@ -15,7 +15,7 @@
     } else{
         $dados = array(
             'tipo' => 'error',
-            'mensagem' => 'Não foi possível excluir o serviço.'
+            'mensagem' => 'Não foi possível excluir o serviço, pois o mesmo está sendo utilizado em registro de mensalidades.'
         );
     }
 
