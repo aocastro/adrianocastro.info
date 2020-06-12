@@ -21,3 +21,9 @@ $('.students').click(function() {
     $('#content').load('src/students/view/list-students.html')
     $('main').toggleClass('toggled')
 })
+
+$('.tuition').click(function() {
+    $('#content').empty()
+    $('#content').load('src/tuition/view/list-tuition.html')
+    $('main').toggleClass('toggled')
+})
