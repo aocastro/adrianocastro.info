@@ -25,7 +25,8 @@ $(document).ready(function() {
                         $('#dueDate').val(dado.dados.vencimento)
                         $('#grossValue').val(dado.dados.grossValue)
                         $('#amountPaid').val(dado.dados.grossValue)
-
+                        $('#idStudents').val(dado.dados.idStudents)
+                        $('#idTuition').val(dado.dados.idTuition)
                         $.ajax({
                             type: 'POST',
                             dataType: 'json',

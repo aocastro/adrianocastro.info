@@ -11,7 +11,7 @@
     $colunas = $requestData['columns'];
 
     //Preparar o comando sql para obter os dados da categoria
-    $sql = "SELECT s.nameStudents, t.idTuition, DATE_FORMAT(t.dueDate, '%d/%m/%Y') as vencimento, t.grossValue FROM AGUAVIVA_STUDENTS s, AGUAVIVA_TUITION t WHERE s.idStudents = t.AGUAVIVA_STUDENTS_idStudents AND t.statusPayment = 1 AND 1=1 ";
+    $sql = "SELECT * FROM AGUAVIVA_USERS WHERE 1=1 ";
 
     //Obter o total de registros cadastrados
     $resultado = $pdo->query($sql);
@@ -22,8 +22,8 @@
     if( !empty( $filtro ) ){
         //Montar a expressão lógica que irá compor os filtros
         //Aqui você deverá determinar quais colunas farão parte do filtro
-        $sql .= " AND (dueDate LIKE '$filtro%' ";
-        $sql .= " OR nameStudents LIKE '$filtro%') ";
+        $sql .= " AND (idUsers LIKE '$filtro%' ";
+        $sql .= " OR nameUsers LIKE '$filtro%') ";
     }
     
     //Obter o total dos dados filtrados
@@ -40,7 +40,7 @@
     $tamanho = $requestData['length']; //Obtém o tamanho do limite
     
     //Realizar o ORDER BY com LIMIT
-    $sql .= " GROUP BY s.idStudents ORDER BY $ordem $direcao LIMIT $inicio, $tamanho ";
+    $sql .= " ORDER BY $ordem $direcao LIMIT $inicio, $tamanho ";
     $resultado = $pdo->query($sql);
     $dados = array();
     while($row = $resultado->fetch(PDO::FETCH_ASSOC)){

@@ -2,10 +2,10 @@
 
     include('../../connection/conn.php');
 
-    $idTuition = $_REQUEST['idTuition'];
+    $idUsers = $_REQUEST['idUsers'];
 
-    $sql = "SELECT s.idStudents, s.nameStudents, t.idTuition, DATE_FORMAT(t.dueDate, '%d/%m/%Y') as vencimento, t.grossValue 
-    FROM AGUAVIVA_STUDENTS s, AGUAVIVA_TUITION t WHERE s.idStudents = t.AGUAVIVA_STUDENTS_idStudents AND t.idTuition = $idTuition";
+    $sql = "SELECT * FROM AGUAVIVA_USERS 
+            WHERE idUsers=$idUsers";
     
     $resultado = $pdo->query($sql);
     if($resultado){
@@ -21,7 +21,7 @@
     } else{
         $dados = array(
             'tipo' => 'error',
-            'mensagem' => 'Não foi possível obter o serviço.',
+            'mensagem' => 'Não foi possível obter o usuário.',
             'dados' => array()
         );
     }

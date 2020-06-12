@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#table-services').on('click', 'button.btn-edit', function(e) {
+    $('#table-users').on('click', 'button.btn-view', function(e) {
 
         e.preventDefault()
 
@@ -8,27 +8,29 @@ $(document).ready(function() {
         $('.modal-title').empty()
         $('.modal-body').empty()
 
-        $('.modal-title').append('<h4 class="text-danger">Editar serviço</h4>')
+        $('.modal-title').append('<h4 class="text-danger">Visualizar usuário</h4>')
 
-        let idServices = `idServices=${$(this).attr('id')}`
+        let idUsers = `idUsers=${$(this).attr('id')}`
 
         $.ajax({
             type: 'POST',
             dataType: 'json',
             async: true,
-            data: idServices,
-            url: 'src/services/model/view-services.php',
+            data: idUsers,
+            url: 'src/users/model/view-users.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('src/services/view/form-services.html', function() {
-                        $('#nameServices').val(dado.dados.nameServices)
-                        $('#valueServices').val(dado.dados.valueServices)
-                        $('#idServices').val(dado.dados.idServices)
+                    $('.modal-body').load('src/users/view/form-users.html', function() {
+                        $('#nameUsers').val(dado.dados.nameUsers)
+                        $('#nameUsers').attr('readonly', 'true')
+                        $('#loginUsers').val(dado.dados.loginUsers)
+                        $('#loginUsers').attr('readonly', 'true')
+                        $('#passwordUsers').val(dado.dados.passwordUsers)
+                        $('#passwordUsers').attr('readonly', 'true')
                     })
 
-                    $('.btn-save').removeAttr('data-operation')
-                    $('.btn-save').show()
-                    $('#modal-services').modal('show')
+                    $('.btn-save').hide()
+                    $('#modal-users').modal('show')
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert
                         title: 'e-Academia', // Título da janela SweetAler
