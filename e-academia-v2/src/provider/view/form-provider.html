@@ -1,0 +1,29 @@
+<form id="form-provider">
+    <div class="form-group">
+        <label>Nome do fonecedor</label>
+        <input type="text" name="nameProvider" id="nameProvider" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Endereço completo</label>
+        <input type="text" name="addressProvider" id="addressProvider" class="form-control">
+    </div>
+    <div class="form-group row">
+        <div class="col-12 col-md-6">
+            <label>Telefone Fixo</label>
+            <input type="tel" name="phoneProvider" id="phoneProvider" class="form-control">
+        </div>
+        <div class="col-12 col-md-6">
+            <label>Telefone Fixo</label>
+            <input type="tel" name="celularProvider" id="celularProvider" class="form-control">
+        </div>
+    </div>
+    <input type="hidden" name="idProvider" id="idProvider">
+</form>
+
+<script src="libs/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#phoneProvider').mask('(99) 9999-9999')
+        $('#celularProvider').mask('(99) 99999-9999')
+    })
+</script>

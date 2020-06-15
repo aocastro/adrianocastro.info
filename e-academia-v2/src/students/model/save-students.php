@@ -2,8 +2,6 @@
 
     session_start();
 
-    $_SESSION['idUsers'] = 1;
-
     //Obtém uma conexão com o banco de dados
     include('../../connection/conn.php');
 

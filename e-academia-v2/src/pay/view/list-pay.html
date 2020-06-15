@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header">
+                <div class="card-title row">
+                    <div class="col-12 col-md-9">
+                        <h4 class="text-agua">Gerenciador de Contas a Pagar</h4>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button class="btn btn-agua btn-block btn-new"><i class="mdi mdi-plus-circle"></i> Novo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="table-pay">
+                        <thead class="thead-agua">
+                            <tr>
+                                <th scope="col" class="text-center">Vencimento</th>
+                                <th scope="col" class="text-left">Fornecedor</th>
+                                <th scope="col" class="text-center">Valor</th>
+                                <th scope="col" class="text-center">Status</th>
+                                <th scope="col" class="text-center">Ações</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal com as funcionalidades do CRUD -->
+
+<div id="modal-pay" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content shadow-lg shadow p-3 mb-5">
+            <div class="modal-header">
+                <div class="modal-title">
+                    ...
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Content</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="mdi mdi-close-circle"></i> Fechar</button>
+                <button type="button" class="btn btn-primary btn-save"><i class="mdi mdi-content-save"></i> Salvar mudanças</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fim do modal com as funcionalidades do CRUD -->
+
+<script src="src/pay/controller/list-pay.js"></script>
+<script src="src/pay/controller/new-pay.js"></script>
+<script src="src/pay/controller/save-pay.js"></script>
+<script src="src/pay/controller/view-pay.js"></script>
+<script src="src/pay/controller/payment.js"></script>
+<script src="src/pay/controller/delete-pay.js"></script>
