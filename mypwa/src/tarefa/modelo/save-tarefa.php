@@ -23,40 +23,44 @@
         if($operacao == 'insert'){
             //Prepara o comando sql para executar o INSERT
             try {
-                $stmt = $pdo->prepare('INSERT INTO MYPWA_USUARIO (nome, login, senha) VALUES (:nome, :login, :senha)');
+                $stmt = $pdo->prepare('INSERT INTO MYPWA_TAREFA (nome, data, local, status, usuario_id) VALUES (:nome, :data, :local, :status, :usuario_id)');
                 $stmt->execute(array(
                     ':nome' => utf8_decode($requestData['nome']),
-                    ':login' => $requestData['login'],
-                    ':senha' => md5($requestData['senha'])
+                    ':data' => $requestData['data'],
+                    ':local' => utf8_decode($requestData['local']),
+                    ':status' => $requestData['status'],
+                    ':usuario_id' => $requestData['usuario_id']
                 ));
                 $dados = array(
                     "tipo" => 'success',
-                    "mensagem" => 'Usuário salvo com sucesso.'
+                    "mensagem" => 'Tarefa salva com sucesso.'
                 );
             } catch(PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível salvar o usuário.'
+                    "mensagem" => 'Não foi possível salvar a tarefa.'
                 );
             }
         } else { //Caso contrário, ou qualquer valor diferente de 'insert'
             //Prepara o comando sql para executar o UPDATE
             try {
-                $stmt = $pdo->prepare('UPDATE MYPWA_USUARIO SET nome = :nome, login = :login, senha = :senha WHERE id = :id');
+                $stmt = $pdo->prepare('UPDATE MYPWA_TAREFA SET nome = :nome, data = :data, local = :local, status = :status, usuario_id = :usuario_id WHERE id = :id');
                 $stmt->execute(array(
                     ':id' => $id,
                     ':nome' => utf8_decode($requestData['nome']),
-                    ':login' => $requestData['login'],
-                    ':senha' => md5($requestData['senha'])
+                    ':data' => $requestData['data'],
+                    ':local' => utf8_decode($requestData['local']),
+                    ':status' => $requestData['status'],
+                    ':usuario_id' => $requestData['usuario_id']
                 ));
                 $dados = array(
                     "tipo" => 'success',
-                    "mensagem" => 'Dados do usuário alterado com sucesso.'
+                    "mensagem" => 'Tarefa alterada com sucesso.'
                 );
             } catch(PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível alterar os dados do usuário.'
+                    "mensagem" => 'Não foi possível alterar a tarefa.'
                 );
             }
         }
