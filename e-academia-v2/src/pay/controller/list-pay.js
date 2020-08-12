@@ -19,7 +19,13 @@ $(document).ready(function() {
             },
             {
                 "data": 'valuePay',
-                "className": 'text-center'
+                "orderable": false,
+                "searchable": false,
+                "className": 'text-center',
+                "render": function(data, type, row, meta) {
+                    var valorFormatado = parseFloat(data).toFixed(2).replace(".", ",")
+                    return 'R$ ' + valorFormatado
+                }
             },
             {
                 "data": 'status',

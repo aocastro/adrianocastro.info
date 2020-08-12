@@ -41,7 +41,7 @@
             </a>
             <a>
                 <li class="text-center tuition">
-                    <i class="mdi mdi-square-inc-cash mdi-18px"></i><br> Mensalidades
+                    <i class="mdi mdi-cash-plus mdi-18px"></i><br> Mensalidades
                 </li>
             </a>
             <a>
@@ -88,6 +88,52 @@
 
         <div id="content">
 
+            <div class="row mt-5 justify-content-center">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h5 class="text-primary">
+                                <i class="mdi mdi-cash-plus mdi-36px"></i> Mensalidades a receber
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="tuition" class="text-center text-primary">
+                                R$ 00,00
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h5 class="text-danger">
+                                <i class="mdi mdi-cash-minus mdi-36px"></i> Contas a pagar
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="pay" class="text-center text-danger">
+                                R$ 00,00
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h5 class="text-info">
+                                <i class="mdi mdi-account mdi-36px"></i> Alunos cadastrados
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="students" class="text-center text-info">
+                                00
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </main>
@@ -98,6 +144,7 @@
     <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
     <script src="libs/DataTables/datatables.js"></script>
     <script src="src/users/controller/logout.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

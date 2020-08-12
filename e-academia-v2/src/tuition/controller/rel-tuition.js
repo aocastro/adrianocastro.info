@@ -7,13 +7,33 @@ $(document).ready(function() {
             setTimeout(function() { $('#modal-loading').modal('hide') }, 1000);
         }
 
+        $.ajax({
+            dataType: 'json',
+            type: 'post',
+            assync: false,
+            url: 'src/tuition/model/types-tuition.php',
+            data: dados,
+            success: function(dados) {
+                for (var i = 0; i < dados.length; i++) {
+                    let types = `
+                        <div class="alert alert-info" role="alert">
+                            <h1 class="text-agua">Total em ${dados[i].namePayment}: R$ ${dados[i].total}</h1>
+                        </div>
+                    `
+                    $('#rel-tuition').append(types)
+                }
+
+            }
+        })
+
+
         var dados = $('#filter-tuition').serialize()
         var url = 'src/tuition/model/totaly-tuition.php'
 
         $.ajax({
             dataType: 'json',
             type: 'post',
-            assync: true,
+            assync: false,
             url: url,
             data: dados,
             success: function(dados) {
@@ -24,24 +44,6 @@ $(document).ready(function() {
                         </div>
                     `
                     $('#rel-tuition').append(totaly)
-                }
-            }
-        })
-
-        $.ajax({
-            dataType: 'json',
-            type: 'post',
-            assync: true,
-            url: url,
-            data: 'src/tuition/model/types-tuition.php',
-            success: function(dados) {
-                for (var i = 0; i < dados.length; i++) {
-                    let types = `
-                        <div class="alert alert-info" role="alert">
-                            <h1 class="text-agua">Total em ${dados[i].namePayment}: R$ ${dados[i].total}</h1>
-                        </div>
-                    `
-                    $('#rel-tuition').append(types)
                 }
                 hideLoading()
             }
