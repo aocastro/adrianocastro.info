@@ -46,6 +46,7 @@
             //Prepara o comando sql para executar o UPDATE
             //Muda o status da conta para pago
             $status = 2;
+            $dateRegister = date('Y-m-d H:i:s');
             try {
                 $stmt = $pdo->prepare('UPDATE AGUAVIVA_PAY SET discountPay = :discountPay, additionPay = :additionPay, amountPaid = :amountPaid, status = :status, dateRegister = :dateRegister WHERE idPay = :idPay');
                 $stmt->execute(array(
@@ -54,7 +55,7 @@
                     ':additionPay' => $requestData['additionPay'],
                     ':amountPaid' => $requestData['amountPaid'],
                     ':status' => $status,
-                    ':dateRegister' => $requestData['dateRegister']
+                    ':dateRegister' => $dateRegister
                 ));
                 $dados = array(
                     "tipo" => 'success',

@@ -4,7 +4,7 @@
 
     $idPay = $_REQUEST['idPay'];
 
-    $sql = "SELECT f.idProvider, f.nameProvider, p.idPay, DATE_FORMAT(p.datePay, '%d/%m/%Y') as vencimento, p.valuePay, p.valuePay, p.discountPay, p.additionPay, p.amountPaid, p.status 
+    $sql = "SELECT f.idProvider, f.nameProvider, p.idPay, datePay as vencimento, p.valuePay, p.valuePay, p.discountPay, p.additionPay, p.amountPaid, p.status 
             FROM AGUAVIVA_PAY p, AGUAVIVA_PROVIDER f 
             WHERE p.AGUAVIVA_PROVIDER_idProvider = f.idProvider AND p.idPay = $idPay";
     

@@ -23,15 +23,15 @@ $(document).ready(function() {
                     $('.modal-body').load('src/pay/view/form-pay.html', function() {
                         $('#AGUAVIVA_PROVIDER_idProvider').empty()
                         $('#AGUAVIVA_PROVIDER_idProvider').append(`<option value="">${dado.dados.nameProvider}</option>`)
-                        $('#datePay').val(dado.dados.datePay)
+                        $('#datePay').val(dado.dados.vencimento)
                         $('#datePay').attr('readonly', 'true')
-                        $('#valuePay').val(dado.dados.valuePay)
+                        $('#valuePay').val(parseFloat(dado.dados.valuePay).toFixed(2).replace('.', ','))
                         $('#valuePay').attr('readonly', 'true')
-                        $('#discountPay').val(dado.dados.discountPay)
+                        dado.dados.discountPay == "" ? $('#discountPay').val('00,00') : $('#discountPay').val(parseFloat(dado.dados.discountPay).toFixed(2).replace('.', ','))
                         $('#discountPay').attr('readonly', 'true')
-                        $('#additionPay').val(dado.dados.additionPay)
+                        dado.dados.additionPay == "" ? $('#additionPay').val('00,00') : $('#additionPay').val(parseFloat(dado.dados.additionPay).toFixed(2).replace('.', ','))
                         $('#additionPay').attr('readonly', 'true')
-                        $('#amountPaid').val(dado.dados.amountPaid)
+                        dado.dados.amountPaid == "" ? $('#amountPaid').val('00,00') : $('#amountPaid').val(parseFloat(dado.dados.amountPaid).toFixed(2).replace('.', ','))
                         $('#amountPaid').attr('readonly', 'true')
                         if (dado.dados.status == 1) {
                             $('#idPay').after(`

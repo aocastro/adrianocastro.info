@@ -4,8 +4,10 @@ $('#discountPay').focusout(function() {
 
     amountPaid = parseFloat(amountPaid) - parseFloat(discount)
 
+    amountPaid = parseFloat(amountPaid).toFixed(2).replace('.', ',')
+
     $('#amountPaid').empty()
-    $('#amountPaid').val(parseFloat(amountPaid))
+    $('#amountPaid').val(amountPaid.toString())
 })
 
 $('#additionPay').focusout(function() {
@@ -15,6 +17,8 @@ $('#additionPay').focusout(function() {
 
     amountPaid = (parseFloat(amountPaid) - parseFloat(discount)) + parseFloat(additionPay)
 
+    amountPaid = parseFloat(amountPaid).toFixed(2).replace('.', ',')
+
     $('#amountPaid').empty()
-    $('#amountPaid').val(parseFloat(amountPaid))
+    $('#amountPaid').val(amountPaid.toString())
 })

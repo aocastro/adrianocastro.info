@@ -12,24 +12,52 @@
         </div>
         <div class="col-12 col-md-6">
             <label>Valor</label>
-            <input type="number" name="valuePay" id="valuePay" class="form-control">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                </div>
+                <input type="text" name="valuePay" id="valuePay" class="form-control">
+            </div>
         </div>
     </div>
     <div class="form-group row">
         <div class="col-12 col-md-6">
             <label>Desconto</label>
-            <input type="number" name="discountPay" id="discountPay" class="form-control">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                </div>
+                <input type="text" name="discountPay" id="discountPay" class="form-control">
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <label>Juros</label>
-            <input type="number" name="additionPay" id="additionPay" class="form-control">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                </div>
+                <input type="text" name="additionPay" id="additionPay" class="form-control">
+            </div>
         </div>
     </div>
     <div class="form-group">
         <label>Valor pago</label>
-        <input type="number" name="amountPaid" id="amountPaid" class="form-control">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+            </div>
+            <input type="text" name="amountPaid" id="amountPaid" class="form-control">
+        </div>
     </div>
     <input type="hidden" name="idPay" id="idPay">
 </form>
 
 <script src="src/pay/controller/discount-calculation.js"></script>
+<script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+
+<script>
+    $('#valuePay').mask('99,99')
+    $('#discountPay').mask('99,99')
+    $('#additionPay').mask('99,99')
+    $('#amoundPaid').mask('99,99')
+</script>

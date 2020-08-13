@@ -18,8 +18,14 @@ $(document).ready(function() {
                 "className": 'text-center'
             },
             {
-                "data": 'grossValue'.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
-                "className": 'text-center'
+                "data": 'grossValue',
+                "orderable": false,
+                "searchable": false,
+                "className": 'text-center',
+                "render": function(data, type, row, meta) {
+                    var valorFormatado = parseFloat(data).toFixed(2).replace(".", ",")
+                    return 'R$ ' + valorFormatado
+                }
             },
             {
                 "data": 'idTuition',
