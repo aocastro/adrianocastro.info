@@ -23,8 +23,8 @@ $(document).ready(function() {
                     $('.modal-body').load('src/tuition/view/form-tuition.html', function() {
                         $('#nameStudents').val(dado.dados.nameStudents)
                         $('#dueDate').val(dado.dados.vencimento)
-                        $('#grossValue').val(dado.dados.grossValue)
-                        $('#amountPaid').val(dado.dados.grossValue)
+                        $('#grossValue').val(parseFloat(dado.dados.grossValue).toFixed(2).replace('.', ','))
+                        $('#amountPaid').val(parseFloat(dado.dados.grossValue).toFixed(2).replace('.', ','))
                         $('#idStudents').val(dado.dados.idStudents)
                         $('#idTuition').val(dado.dados.idTuition)
                         $.ajax({

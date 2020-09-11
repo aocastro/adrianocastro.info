@@ -20,8 +20,12 @@ $(document).ready(function() {
         success: function(dados) {
             $('#tuition').empty()
             let total = dados[0].total
-            total = parseFloat(total).toFixed(2).replace(".", ",")
-            $('#tuition').append('R$ ' + total)
+            if (total == '') {
+                $('#tuition').append('R$ 0,00')
+            } else {
+                total = parseFloat(total).toFixed(2).replace(".", ",")
+                $('#tuition').append('R$ ' + total)
+            }
         }
     })
 
@@ -34,8 +38,12 @@ $(document).ready(function() {
         success: function(dados) {
             $('#pay').empty()
             let total = dados[0].total
-            total = parseFloat(total).toFixed(2).replace(".", ",")
-            $('#pay').append('R$ ' + total)
+            if (total == '') {
+                $('#pay').append('R$ 0,00')
+            } else {
+                total = parseFloat(total).toFixed(2).replace(".", ",")
+                $('#pay').append('R$ ' + total)
+            }
         }
     })
 })
