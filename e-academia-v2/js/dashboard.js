@@ -46,4 +46,10 @@ $(document).ready(function() {
             }
         }
     })
+
+    $('#card-tuition').click(function(e) {
+        e.preventDefault()
+        $('#content').empty()
+        $('#content').load('src/tuition/view/list-open-tuition.html')
+    })
 })

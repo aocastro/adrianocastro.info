@@ -3,10 +3,16 @@ function loadServices(idServices) {
         type: 'POST',
         dataType: 'json',
         async: true,
-        data: idServices,
-        url: 'src/services/model/view-services.php',
+        url: 'src/services/model/all-services.php',
         success: function(dados) {
-            $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${dados.dados.idServices}">${dados.dados.nameServices}</option>`)
+            for (const dado of dados) {
+                if (idServices === dado.idServices) {
+                    console.log(idServices)
+                    $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${dado.idServices}" selected>${dado.nameServices}</option>`)
+                } else {
+                    $('#AGUAVIVA_SERVICES_idServices').append(`<option value="${dado.idServices}">${dado.nameServices}</option>`)
+                }
+            }
         }
     })
 }
@@ -63,7 +69,7 @@ $(document).ready(function() {
                         $('#emailStudents').val(dado.dados.emailStudents)
                         $('#AGUAVIVA_SERVICES_idServices').empty()
                         $('#AGUAVIVA_SERVICES_idServices').attr('readonly', 'true')
-                        idServices = `idServices=${dado.dados.AGUAVIVA_SERVICES_idServices}`
+                        idServices = dado.dados.AGUAVIVA_SERVICES_idServices
                         loadServices(idServices)
                         $('#paydayStudents').val(dado.dados.paydayStudents)
                         $('#observationStudents').val(dado.dados.observationStudents)

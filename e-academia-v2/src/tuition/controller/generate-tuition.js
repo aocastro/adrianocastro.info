@@ -9,9 +9,9 @@ $(document).ready(function() {
 
         $('.modal-body').load('src/tuition/view/generate-tuition.html')
 
-        $('.btn-save').show()
+        $('.btn-save').hide()
 
-        $('.btn-save').attr('data-operation', 'insert')
+        $('.btn-generate').show()
 
         $('#modal-tuition').modal('show')
     })

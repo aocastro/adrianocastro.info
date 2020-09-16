@@ -4,11 +4,22 @@
         <input type="text" name="nameStudents" id="nameStudents" class="form-control">
     </div>
     <div id="result"></div>
-    <div class="form-group">
-        <label>Informe a data de vencimento</label>
-        <input type="date" name="dueDate" id="dueDate" class="form-control">
+    <div class="form-group row">
+        <div class="col-12 col-md-6">
+            <label>Informe a data de vencimento</label>
+            <input type="date" name="dueDate" id="dueDate" class="form-control">
+        </div>
+        <div class="col-12 col-md-6">
+            <label>Informe o valor</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                </div>
+                <input type="text" name="grossValue" id="grossValue" class="form-control">
+            </div>
+        </div>
     </div>
-    <input type="hidden" name="idStudents" id="idStudents">
+    <input type="hidden" name="idStudents" id="idStudents" value="">
 </form>
 
 <script src="src/students/controller/find-students.js"></script>

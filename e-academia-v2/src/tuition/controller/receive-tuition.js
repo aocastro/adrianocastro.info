@@ -42,6 +42,7 @@ $(document).ready(function() {
                     })
 
                     $('.btn-save').show()
+                    $('.btn-generate').hide()
                     $('#modal-tuition').modal('show')
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert

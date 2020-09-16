@@ -3,7 +3,7 @@ function selectStudent() {
         e.preventDefault()
 
         let name = $(this).attr('data-name')
-        let id = $(this).attr('id')
+        let id = $(this).attr('href')
 
         $('#nameStudents').val(name)
         $('#idStudents').val(id)
